@@ -1,0 +1,8 @@
+@@FILE internal/extract/python.go
+@@OLD
+for i, line := range lines {
+    ln := i + 1
+@@NEW
+for i := range lines {
+    ln := i + 1
+@@END

@@ -1,0 +1,30 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+vars    map[string][]*model.Symbol
+@@NEW
+vars    map[string][]*model.Symbol
+  assigns map[string]string
+  ctxs    map[string]*fileCtx
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+vars: map[string][]*model.Symbol{}}
+@@NEW
+vars: map[string][]*model.Symbol{}, assigns: buildAssigns(in.Refs)}
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+ctxs := map[string]*fileCtx{}
+@@NEW
+ctxs := map[string]*fileCtx{}
+  r.ctxs = ctxs
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+return r.viaLocal(c, name, strings.TrimPrefix(strings.TrimPrefix(hint, "local"), ":"))
+@@NEW
+return r.viaLocalInferred(c, from, name, strings.TrimPrefix(strings.TrimPrefix(hint, "local"), ":"))
+@@END

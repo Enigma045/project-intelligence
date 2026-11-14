@@ -1,0 +1,9 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+first := segs[0]
+@@NEW
+first := segs[0]
+  if first == "?" {
+    return r.noCandidate(c)
+  }
+@@END

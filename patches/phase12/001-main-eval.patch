@@ -1,0 +1,20 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+"undo", "routes", "db", "bench":
+@@NEW
+"undo", "routes", "db", "bench", "eval":
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+&& !runBackend(cmd, absRoot, st, args, *asJSON) {
+@@NEW
+&& !runBackend(cmd, absRoot, st, args, *asJSON) && !runEval(cmd, absRoot, st, args, *asJSON) {
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+|routes|db|bench>
+@@NEW
+|routes|db|bench|eval>
+@@END

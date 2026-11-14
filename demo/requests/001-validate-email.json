@@ -1,0 +1,5 @@
+{"edits": [
+  {"file": "demo/web/register.html", "op": "replace", "old": "name=\"email\" type=\"text\"", "new": "name=\"email\" type=\"email\" required"},
+  {"op": "replace_symbol", "symbol": "function:demo/web/register.js#isValidEmail", "text": "function isValidEmail(value) {\n  return value.includes(\"@\") && value.includes(\".\");\n}"},
+  {"op": "insert_after_symbol", "symbol": "function:demo/web/register.js#isValidEmail", "text": "\nfunction showEmailError(show) {\n  document.getElementById(\"emailError\").classList.toggle(\"visible\", show);\n}"}
+]}

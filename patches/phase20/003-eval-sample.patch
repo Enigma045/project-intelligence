@@ -1,0 +1,24 @@
+@@FILE cmd/pidx/eval.go
+@@OLD
+statuses = []string{"dynamic", "unresolved", "ambiguous"}
+@@NEW
+statuses = []string{"dynamic", "unresolved", "ambiguous"}
+  case "value":
+    statuses = []string{"value"}
+@@END
+
+@@FILE cmd/pidx/eval.go
+@@OLD
+picked := eval.SampleEdges(edges, types, n, seed+mode, skip)
+@@NEW
+if lg := kv["lang"]; lg != "" {
+    keep := edges[:0]
+    for _, e := range edges {
+      if eval.LangOf(e.File) == lg {
+        keep = append(keep, e)
+      }
+    }
+    edges = keep
+  }
+  picked := eval.SampleEdges(edges, types, n, seed+mode, skip)
+@@END

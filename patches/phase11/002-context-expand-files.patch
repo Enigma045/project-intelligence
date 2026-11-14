@@ -1,0 +1,6 @@
+@@FILE cmd/pidx/context.go
+@@OLD
+score, err := expand(st, seeds)
+@@NEW
+score, err := expandWithFiles(st, seeds)
+@@END

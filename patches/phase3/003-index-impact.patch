@@ -1,0 +1,2 @@
+# Intentionally empty: internal/index/index.go is now shipped as a complete file
+# because these anchor blocks failed to match the on-disk copy (block 'need :=' found 0).

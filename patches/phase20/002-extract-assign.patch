@@ -1,0 +1,7 @@
+@@FILE internal/extract/golang.go
+@@OLD
+locals := collectLocals(fset, d)
+@@NEW
+locals := collectLocals(fset, d)
+        facts.Refs = append(facts.Refs, goAssignRefs(fset, d, q)...)
+@@END

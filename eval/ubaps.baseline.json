@@ -1,0 +1,78 @@
+{
+  "edges.precision": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "edges.precision.go": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "edges.precision.js": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "edges.recall": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "edges.recall.go": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "edges.recall.js": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "task.admin_delete_user.recall": {
+    "value": 0.75,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "task.committee_review.recall": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "task.forgot_password.recall": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "task.login.recall": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "task.pay_installment.recall": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "task.student_application.recall": {
+    "value": 1,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "tasks.noise": {
+    "value": 0,
+    "dir": "down",
+    "tol": 0
+  },
+  "tasks.recall": {
+    "value": 0.9583333333333334,
+    "dir": "up",
+    "tol": 0.001
+  },
+  "tasks.tokens": {
+    "value": 1363,
+    "dir": "down",
+    "tol": 0.15,
+    "rel": true
+  }
+}

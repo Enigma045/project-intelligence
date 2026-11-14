@@ -1,0 +1,3 @@
+{"dry_run": true, "edits": [
+  {"file": "demo/web/style.css", "op": "replace", "old": ".error { display: none; }", "new": ".error { display: block; }"}
+]}

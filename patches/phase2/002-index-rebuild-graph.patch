@@ -1,0 +1,17 @@
+@@FILE internal/index/index.go
+@@OLD
+_ = st.SetMeta("last_scan", time.Now().UTC().Format(time.RFC3339))
+@@NEW
+need := rep.Added+rep.Changed+rep.Deleted > 0
+  if !need {
+    if n, cerr := st.EdgeCount(); cerr == nil && n == 0 {
+      need = true
+    }
+  }
+  if need {
+    if _, err := RebuildGraph(st); err != nil {
+      return rep, err
+    }
+  }
+  _ = st.SetMeta("last_scan", time.Now().UTC().Format(time.RFC3339))
+@@END

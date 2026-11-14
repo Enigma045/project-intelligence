@@ -1,0 +1,16 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+in := map[string]bool{}
+@@NEW
+if len(segs) > 2 || r.isPkgVar(info, last) {
+      return []hit{{"", "value", 0.8}}
+    }
+    in := map[string]bool{}
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+return []hit{{"", "dynamic", 0.2}}
+@@NEW
+return r.noCandidate(c)
+@@END

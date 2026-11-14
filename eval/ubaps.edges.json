@@ -1,0 +1,1265 @@
+{
+  "name": "ubaps.edges",
+  "edges": [
+    {
+      "file": "utils/scheme.go",
+      "line": 283,
+      "type": "calls",
+      "name": "Strtofloat",
+      "truth": "function:utils/tools.go#Strtofloat",
+      "review": "ok",
+      "code": "value,err := Strtofloat(assighned_amount)",
+      "was": "resolved -> function:utils/tools.go#Strtofloat"
+    },
+    {
+      "file": "main.go",
+      "line": 34,
+      "type": "handles_route",
+      "name": "Routes.SubmitForm",
+      "truth": "function:Routes/StudentApplication3.go#SubmitForm",
+      "review": "ok",
+      "code": "mux.Handle(\"/SubmitForm\", middleware.RequireAuth(http.HandlerFunc(Routes.SubmitForm)))",
+      "was": "resolved -> function:Routes/StudentApplication3.go#SubmitForm"
+    },
+    {
+      "file": "Pages/Html/student/Js/Committe_Review.js",
+      "line": 244,
+      "type": "listens",
+      "name": "closeModals",
+      "truth": "function:Pages/Html/student/Js/Committe_Review.js#closeModals",
+      "review": "ok",
+      "code": "btn.addEventListener(\"click\", closeModals);",
+      "was": "resolved -> function:Pages/Html/student/Js/Committe_Review.js#closeModals"
+    },
+    {
+      "file": "Pages/Html/student/Js/Student_reports.js",
+      "line": 45,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "truth": "file:Pages/Html/student/Js/Student_reports.js",
+      "review": "skip",
+      "code": "genBtn.onclick = () => {",
+      "was": "inferred -> file:Pages/Html/student/Js/Student_reports.js"
+    },
+    {
+      "file": "Routes/AdminModifications.go",
+      "line": 233,
+      "type": "queries_table",
+      "name": "password_resets",
+      "truth": "table:Routes/Auth_ForgotPassword.go#password_resets",
+      "review": "ok",
+      "code": "_, err = tx.Exec(ctx, `",
+      "was": "resolved -> table:Routes/Auth_ForgotPassword.go#password_resets"
+    },
+    {
+      "file": "Pages/Html/student/Js/Edit_User.js",
+      "line": 2,
+      "type": "references_dom",
+      "name": "#editUserModal",
+      "truth": "element:Pages/Html/student/Protected/Admin_Modification.html#div#editUserModal",
+      "review": "ok",
+      "code": "const editModal = document.getElementById(\"editUserModal\");",
+      "was": "resolved -> element:Pages/Html/student/Protected/Admin_Modification.html#div#editUserModal"
+    },
+    {
+      "file": "Pages/Html/student/Js/Bursary_Card_Updater.js",
+      "line": 13,
+      "type": "requests_api",
+      "name": "/getapplicationstatus",
+      "truth": "route:main.go#ANY /getapplicationstatus",
+      "review": "ok",
+      "code": "fetch(\"/getapplicationstatus\", {",
+      "was": "resolved -> route:main.go#ANY /getapplicationstatus"
+    },
+    {
+      "file": "Pages/Html/student/Js/Dashboard.js",
+      "line": 34,
+      "type": "calls",
+      "name": "showToast",
+      "truth": "function:Pages/Html/student/Js/Toast.js#showToast",
+      "review": "ok",
+      "code": "showToast(\"Connection error. Please check your network.\", \"error\");",
+      "was": "inferred -> function:Pages/Html/student/Js/Toast.js#showToast"
+    },
+    {
+      "file": "main.go",
+      "line": 26,
+      "type": "handles_route",
+      "name": "Routes.Login",
+      "truth": "function:Routes/Login2.go#Login",
+      "review": "ok",
+      "code": "mux.HandleFunc(\"/Authorize\", Routes.Login)",
+      "was": "resolved -> function:Routes/Login2.go#Login"
+    },
+    {
+      "file": "Pages/Html/student/Js/Deans_Decisions.js",
+      "line": 117,
+      "type": "listens",
+      "name": "closeModals",
+      "truth": "function:Pages/Html/student/Js/Deans_Decisions.js#closeModals",
+      "review": "ok",
+      "code": "btn.addEventListener(\"click\", closeModals);",
+      "was": "resolved -> function:Pages/Html/student/Js/Deans_Decisions.js#closeModals"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Financial_reports.html",
+      "line": 143,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "truth": "file:Pages/Html/student/Protected/Financial_reports.html",
+      "review": "skip",
+      "code": "deptBtn.addEventListener('click', () => {",
+      "was": "inferred -> file:Pages/Html/student/Protected/Financial_reports.html"
+    },
+    {
+      "file": "Routes/Auth_ForgotPassword.go",
+      "line": 111,
+      "type": "queries_table",
+      "name": "password_resets",
+      "truth": "table:Routes/Auth_ForgotPassword.go#password_resets",
+      "review": "ok",
+      "code": "query := `",
+      "was": "resolved -> table:Routes/Auth_ForgotPassword.go#password_resets"
+    },
+    {
+      "file": "Pages/Html/student/Js/Dean_Dashboard.js",
+      "line": 12,
+      "type": "references_dom",
+      "name": "#num-selected",
+      "truth": "element:Pages/Html/student/Protected/Dean_Dashboard.html#h2#num-selected",
+      "review": "ok",
+      "code": "const selectedEl = document.getElementById('num-selected');",
+      "was": "resolved -> element:Pages/Html/student/Protected/Dean_Dashboard.html#h2#num-selected"
+    },
+    {
+      "file": "Pages/Html/student/Js/Finance_Request.js",
+      "line": 10,
+      "type": "requests_api",
+      "name": "/getstatementrequests",
+      "truth": "route:main.go#ANY /getstatementrequests",
+      "review": "ok",
+      "code": "const res = await fetch(\"/getstatementrequests\", { credentials: \"include\" });",
+      "was": "resolved -> route:main.go#ANY /getstatementrequests"
+    },
+    {
+      "file": "Routes/Stats.go",
+      "line": 35,
+      "type": "calls",
+      "name": "Handles.GetRegistrarStats",
+      "truth": "function:Handles/Stats.go#GetRegistrarStats",
+      "review": "ok",
+      "code": "stats, err := Handles.GetRegistrarStats(Db.DB, ctx)",
+      "was": "resolved -> function:Handles/Stats.go#GetRegistrarStats"
+    },
+    {
+      "file": "main.go",
+      "line": 376,
+      "type": "handles_route",
+      "name": "middleware.Logout",
+      "truth": "function:Middleware/auth2.go#Logout",
+      "review": "ok",
+      "code": "mux.HandleFunc(\"/logout\", middleware.Logout)",
+      "was": "inferred -> function:Middleware/auth2.go#Logout"
+    },
+    {
+      "file": "Pages/Html/student/Js/Edit_User.js",
+      "line": 76,
+      "type": "listens",
+      "name": "closeEditModal",
+      "truth": "function:Pages/Html/student/Js/Edit_User.js#closeEditModal",
+      "review": "ok",
+      "code": "closeBtn.addEventListener(\"click\", closeEditModal);",
+      "was": "resolved -> function:Pages/Html/student/Js/Edit_User.js#closeEditModal"
+    },
+    {
+      "file": "Pages/Html/student/Js/Student_Portal.js",
+      "line": 12,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "truth": "file:Pages/Html/student/Js/Student_Portal.js",
+      "review": "skip",
+      "code": "browseBtn.addEventListener(\"click\", () => {",
+      "was": "inferred -> file:Pages/Html/student/Js/Student_Portal.js"
+    },
+    {
+      "file": "Routes/Auth_ForgotPassword.go",
+      "line": 177,
+      "type": "queries_table",
+      "name": "password_resets",
+      "truth": "table:Routes/Auth_ForgotPassword.go#password_resets",
+      "review": "ok",
+      "code": "err = tx.QueryRow(ctx, `",
+      "was": "resolved -> table:Routes/Auth_ForgotPassword.go#password_resets"
+    },
+    {
+      "file": "Pages/Html/student/Js/Student_reports.js",
+      "line": 287,
+      "type": "references_dom",
+      "name": "#filter-date-start",
+      "truth": "element:Pages/Html/student/Protected/Student_reports.html#input#filter-date-start",
+      "review": "ok",
+      "code": "date_start: document.getElementById('filter-date-start')?.value || '',",
+      "was": "resolved -> element:Pages/Html/student/Protected/Student_reports.html#input#filter-date-start"
+    },
+    {
+      "file": "Pages/Html/student/Js/Dossier_Feature.js",
+      "line": 10,
+      "type": "requests_api",
+      "name": "/api/get-financial-history",
+      "truth": "route:main.go#ANY /api/get-financial-history",
+      "review": "ok",
+      "code": "fetch(\"/api/get-financial-history\", {",
+      "was": "resolved -> route:main.go#ANY /api/get-financial-history"
+    },
+    {
+      "file": "Audit_logs/User_Logs1.go",
+      "line": 447,
+      "type": "calls",
+      "name": "buildFilterQuery",
+      "truth": "function:Audit_logs/User_Logs1.go#buildFilterQuery",
+      "review": "ok",
+      "code": "countQuery, countParams := buildFilterQuery(countBase, filters)",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#buildFilterQuery"
+    },
+    {
+      "file": "main.go",
+      "line": 322,
+      "type": "handles_route",
+      "name": "Routes.Decision_Page",
+      "truth": "function:Routes/Routes.go#Decision_Page",
+      "review": "ok",
+      "code": "mux.Handle(",
+      "was": "resolved -> function:Routes/Routes.go#Decision_Page"
+    },
+    {
+      "file": "Pages/Html/student/Js/card.js",
+      "line": 177,
+      "type": "listens",
+      "name": "closeHardshipModals",
+      "truth": "function:Pages/Html/student/Js/card.js#closeHardshipModals",
+      "review": "ok",
+      "code": "if (closeHardshipBtn) closeHardshipBtn.addEventListener('click', closeHardshipModals);",
+      "was": "resolved -> function:Pages/Html/student/Js/card.js#closeHardshipModals"
+    },
+    {
+      "file": "Pages/Html/student/Js/Committe_Review.js",
+      "line": 48,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "truth": "file:Pages/Html/student/Js/Committe_Review.js",
+      "review": "skip",
+      "code": "clearBtn.addEventListener('click', () => {",
+      "was": "inferred -> file:Pages/Html/student/Js/Committe_Review.js"
+    },
+    {
+      "file": "Routes/Auth_ForgotPassword.go",
+      "line": 220,
+      "type": "queries_table",
+      "name": "password_resets",
+      "truth": "table:Routes/Auth_ForgotPassword.go#password_resets",
+      "review": "ok",
+      "code": "_, err = tx.Exec(ctx, \"DELETE FROM password_resets WHERE token = $1\", token)",
+      "was": "resolved -> table:Routes/Auth_ForgotPassword.go#password_resets"
+    },
+    {
+      "file": "Pages/Html/student/Js/Edit_User.js",
+      "line": 3,
+      "type": "references_dom",
+      "name": "#editUserForm",
+      "truth": "form:Pages/Html/student/Protected/Admin_Modification.html#form#editUserForm",
+      "review": "ok",
+      "code": "const editForm = document.getElementById(\"editUserForm\");",
+      "was": "resolved -> form:Pages/Html/student/Protected/Admin_Modification.html#form#editUserForm"
+    },
+    {
+      "file": "Pages/Html/student/Js/Combined_reports.js",
+      "line": 428,
+      "type": "requests_api",
+      "name": "/api/reports/stats?year=${year}&semester=${semester}&month=${month}",
+      "truth": "route:main.go#ANY /api/reports/stats",
+      "review": "ok",
+      "code": "const res = await fetch(`/api/reports/stats?year=${year}&semester=${semester}&month=${month}`, {",
+      "was": "resolved -> route:main.go#ANY /api/reports/stats"
+    },
+    {
+      "file": "Pages/Html/student/Js/Financial_reports.js",
+      "line": 21,
+      "type": "calls",
+      "name": "updatePayloadAndFetch",
+      "truth": "function:Pages/Html/student/Js/Financial_reports.js#updatePayloadAndFetch",
+      "review": "ok",
+      "code": "updatePayloadAndFetch();",
+      "was": "resolved -> function:Pages/Html/student/Js/Financial_reports.js#updatePayloadAndFetch"
+    },
+    {
+      "file": "main.go",
+      "line": 80,
+      "type": "handles_route",
+      "name": "Routes.ExportComprehensiveReport",
+      "truth": "function:Routes/Reports.go#ExportComprehensiveReport",
+      "review": "ok",
+      "code": "mux.Handle(\"/api/reports/comprehensive\", middleware.RequireAuth(middleware.RequireRole(\"registrar\", \"finance_office\", \"admin\", \"dean_of_stud",
+      "was": "resolved -> function:Routes/Reports.go#ExportComprehensiveReport"
+    },
+    {
+      "file": "Pages/Html/student/Js/Dossier_Feature.js",
+      "line": 65,
+      "type": "listens",
+      "name": "closeDossierModals",
+      "truth": "function:Pages/Html/student/Js/Dossier_Feature.js#closeDossierModals",
+      "review": "ok",
+      "code": "if (closeDossierBtn) closeDossierBtn.addEventListener('click', closeDossierModals);",
+      "was": "resolved -> function:Pages/Html/student/Js/Dossier_Feature.js#closeDossierModals"
+    },
+    {
+      "file": "Pages/Html/student/Js/Student_reports.js",
+      "line": 84,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "truth": "file:Pages/Html/student/Js/Student_reports.js",
+      "review": "skip",
+      "code": "clearBtn.addEventListener('click', () => {",
+      "was": "inferred -> file:Pages/Html/student/Js/Student_reports.js"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Combined_reports.html",
+      "line": 182,
+      "type": "references_dom",
+      "name": "#close-dept-modal",
+      "truth": "element:Pages/Html/student/Protected/Combined_reports.html#button#close-dept-modal",
+      "review": "ok",
+      "code": "const closeDeptBtn = document.getElementById('close-dept-modal');",
+      "was": "resolved -> element:Pages/Html/student/Protected/Combined_reports.html#button#close-dept-modal"
+    },
+    {
+      "file": "Pages/Html/student/Js/Admin_Modification.js",
+      "line": 10,
+      "type": "requests_api",
+      "name": "/getuserdetails?page=${page}&limit=${limit}",
+      "truth": "route:main.go#ANY /getuserdetails",
+      "review": "ok",
+      "code": "const response = await fetch(`/getuserdetails?page=${page}&limit=${limit}`, {",
+      "was": "resolved -> route:main.go#ANY /getuserdetails"
+    },
+    {
+      "file": "Routes/Letters.go",
+      "line": 123,
+      "type": "calls",
+      "name": "Handles.GetUserIDsOfDifferentTypes",
+      "truth": "function:Handles/GetUserIDByEmail1.go#GetUserIDsOfDifferentTypes",
+      "review": "ok",
+      "code": "if staffIDs, err := Handles.GetUserIDsOfDifferentTypes(tx, \"student\"); err == nil {",
+      "was": "resolved -> function:Handles/GetUserIDByEmail1.go#GetUserIDsOfDifferentTypes"
+    },
+    {
+      "file": "main.go",
+      "line": 30,
+      "type": "handles_route",
+      "name": "Routes.Approval",
+      "truth": "function:Routes/FinancialApproval.go#Approval",
+      "review": "ok",
+      "code": "mux.Handle(\"/sendrequest\", middleware.RequireAuth(http.HandlerFunc(Routes.Approval)))",
+      "was": "resolved -> function:Routes/FinancialApproval.go#Approval"
+    },
+    {
+      "file": "Pages/Html/student/Js/Financial_Reaquest_approval.js",
+      "line": 117,
+      "type": "listens",
+      "name": "closeModals",
+      "truth": "function:Pages/Html/student/Js/Financial_Reaquest_approval.js#closeModals",
+      "review": "ok",
+      "code": "btn.addEventListener(\"click\", closeModals);",
+      "was": "resolved -> function:Pages/Html/student/Js/Financial_Reaquest_approval.js#closeModals"
+    },
+    {
+      "file": "Pages/Html/student/Js/Finance_Request.js",
+      "line": 73,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "truth": "file:Pages/Html/student/Js/Finance_Request.js",
+      "review": "skip",
+      "code": "closeModal.onclick = () => modal.classList.remove(\"active\");",
+      "was": "inferred -> file:Pages/Html/student/Js/Finance_Request.js"
+    },
+    {
+      "file": "Pages/Html/student/Js/card.js",
+      "line": 106,
+      "type": "references_dom",
+      "name": "#requestStatementModal",
+      "truth": "element:Pages/Html/student/Protected/Committe_Review.html#div#requestStatementModal",
+      "review": "skip",
+      "code": "const statementModal = document.getElementById('requestStatementModal');",
+      "was": "resolved -> element:Pages/Html/student/Protected/Committe_Review.html#div#requestStatementModal"
+    },
+    {
+      "file": "Pages/Html/student/Js/Bursary_Scheme.js",
+      "line": 31,
+      "type": "requests_api",
+      "name": "/getbenefactor?page=${page}&limit=${limit}",
+      "truth": "route:main.go#ANY /getbenefactor",
+      "review": "ok",
+      "code": "const res = await fetch(`/getbenefactor?page=${page}&limit=${limit}`, {",
+      "was": "resolved -> route:main.go#ANY /getbenefactor"
+    },
+    {
+      "file": "Pages/Html/student/Js/Student_Dashboard.js",
+      "line": 53,
+      "type": "calls",
+      "name": "p.classList.remove",
+      "no_link": true,
+      "review": "ok",
+      "code": "else p.classList.remove(\"active\");",
+      "was": "value"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Profile.html",
+      "line": 148,
+      "type": "listens",
+      "name": "async",
+      "no_link": true,
+      "review": "ok",
+      "code": "document.addEventListener('DOMContentLoaded', async () => {",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Financial_Dashboard.html",
+      "line": 121,
+      "type": "listens_dom",
+      "name": "location.href = '/financial_reports'",
+      "no_link": true,
+      "review": "ok",
+      "code": "<div class=\"action-card\" onclick=\"location.href = '/financial_reports'\">",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Js/Role_Selector.js",
+      "line": 137,
+      "type": "references_dom",
+      "name": "#rs-toggle-btn",
+      "no_link": true,
+      "review": "ok",
+      "code": "const toggleBtn = document.getElementById(\"rs-toggle-btn\");",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Letters_receive.js",
+      "line": 68,
+      "type": "requests_api",
+      "name": "${API_BASE_URL}/send-letter?id=${letterId}",
+      "truth": "route:main.go#ANY /api/send-letter",
+      "review": "fixed",
+      "code": "const response = await fetch(`${API_BASE_URL}/send-letter?id=${letterId}`, {",
+      "was": "dynamic"
+    },
+    {
+      "file": "Routes/Register.go",
+      "line": 41,
+      "type": "calls",
+      "name": "?.Decode",
+      "no_link": true,
+      "review": "ok",
+      "code": "if err := json.NewDecoder(r.Body).Decode(&req); err != nil {",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Js/Notification_Feature.js",
+      "line": 31,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "no_link": true,
+      "review": "skip",
+      "code": "bellIcon.addEventListener('click', function (e) {",
+      "was": "unresolved -> file:Pages/Html/student/Js/Notification_Feature.js"
+    },
+    {
+      "file": "Pages/Html/student/Js/Test_Request.js",
+      "line": 2,
+      "type": "references_dom",
+      "name": "#openModalRequest",
+      "no_link": true,
+      "review": "ok",
+      "code": "const openBtnRequest = document.getElementById(\"openModalRequest\");",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Letters_receive.js",
+      "line": 11,
+      "type": "requests_api",
+      "name": "${API_BASE_URL}/get-letters",
+      "truth": "route:main.go#ANY /api/get-letters",
+      "review": "fixed",
+      "code": "const response = await fetch(`${API_BASE_URL}/get-letters`, {",
+      "was": "dynamic"
+    },
+    {
+      "file": "Routes/Finance.go",
+      "line": 213,
+      "type": "calls",
+      "name": "user_logs.Create_user_log",
+      "truth": "function:Audit_logs/User_Logs1.go#Create_user_log",
+      "review": "fixed",
+      "code": "user_logs.Create_user_log(nil, &performerID, \"admin\", \"DOSSIER_REQUEST_SUCCESS\", fmt.Sprintf(\"Viewed financial dossier for %s\", payload.Reg)",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Student_Dashboard.html",
+      "line": 159,
+      "type": "listens_dom",
+      "name": "location.href = \"/letters\"",
+      "no_link": true,
+      "review": "ok",
+      "code": "<div class=\"action-card\" onclick='location.href = \"/letters\"'>",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Js/Student_Dashboard.js",
+      "line": 32,
+      "type": "references_dom",
+      "name": "#date",
+      "no_link": true,
+      "review": "skip",
+      "code": "const date = document.getElementById(\"date\");",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Audit_Trailer.js",
+      "line": 46,
+      "type": "requests_api",
+      "name": "${endpoint}?page=${page}&limit=${limit}",
+      "no_link": true,
+      "review": "ok",
+      "code": "const response = await fetch(`${endpoint}?page=${page}&limit=${limit}`);",
+      "was": "dynamic"
+    },
+    {
+      "file": "utils/Pagination.go",
+      "line": 16,
+      "type": "calls",
+      "name": "?.Get",
+      "no_link": true,
+      "review": "ok",
+      "code": "pageStr := r.URL.Query().Get(\"page\")",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Js/Test_Delete.js",
+      "line": 10,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "no_link": true,
+      "review": "skip",
+      "code": "document.querySelector(\".tbody\").addEventListener(\"click\", function (e) {",
+      "was": "unresolved -> file:Pages/Html/student/Js/Test_Delete.js"
+    },
+    {
+      "file": "Pages/Html/student/Js/Audit_Logs_Report.js",
+      "line": 170,
+      "type": "references_dom",
+      "name": "#stat-failed",
+      "no_link": true,
+      "review": "ok",
+      "code": "document.getElementById(\"stat-failed\").innerText = failed;",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Dossier_Feature.js",
+      "line": 33,
+      "type": "calls",
+      "name": "data.forEach",
+      "no_link": true,
+      "review": "ok",
+      "code": "data.forEach(item => {",
+      "was": "value"
+    },
+    {
+      "file": "Pages/Html/student/Js/card.js",
+      "line": 211,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "no_link": true,
+      "review": "skip",
+      "code": "dossierBtn.addEventListener('click', () => {",
+      "was": "unresolved -> file:Pages/Html/student/Js/card.js"
+    },
+    {
+      "file": "Pages/Html/student/Js/Financial_reports.js",
+      "line": 314,
+      "type": "references_dom",
+      "name": "#period-semester",
+      "no_link": true,
+      "review": "ok",
+      "code": "const semester = document.getElementById('period-semester')?.value || '';",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Audit_Trailer.js",
+      "line": 217,
+      "type": "calls",
+      "name": "container.appendChild",
+      "no_link": true,
+      "review": "ok",
+      "code": "container.appendChild(prevBtn);",
+      "was": "value"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Financial_Dashboard.html",
+      "line": 81,
+      "type": "listens_dom",
+      "name": "location.href = '/financial'",
+      "no_link": true,
+      "review": "ok",
+      "code": "<button class=\"apply-btn\" onclick=\"location.href = '/financial'\">Financial Request Page</button>",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Js/Combined_reports.js",
+      "line": 425,
+      "type": "references_dom",
+      "name": "#period-month",
+      "no_link": true,
+      "review": "ok",
+      "code": "const month = document.getElementById('period-month')?.value || '';",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Test_Request.js",
+      "line": 6,
+      "type": "calls",
+      "name": "modalRequest.classList.add",
+      "no_link": true,
+      "review": "ok",
+      "code": "modalRequest.classList.add(\"active\");",
+      "was": "value"
+    },
+    {
+      "file": "Pages/Html/student/Js/Benefactor_delete.js",
+      "line": 11,
+      "type": "listens_dom",
+      "name": "(anonymous)",
+      "no_link": true,
+      "review": "skip",
+      "code": "document.querySelector(\".bursarytbody\").addEventListener(\"click\", function (e) {",
+      "was": "unresolved -> file:Pages/Html/student/Js/Benefactor_delete.js"
+    },
+    {
+      "file": "Pages/Html/student/Js/Test_Request.js",
+      "line": 3,
+      "type": "references_dom",
+      "name": "#closeModal",
+      "no_link": true,
+      "review": "skip",
+      "code": "const closeBtnRequest = document.getElementById(\"closeModal\");",
+      "was": "ambiguous -> element:Pages/Html/student/Protected/Bursary_Scheme.html#div#closeModal"
+    },
+    {
+      "file": "patch_reports.py",
+      "line": 282,
+      "type": "calls",
+      "name": "fetchReportStats",
+      "no_link": true,
+      "review": "ok",
+      "code": "async function fetchReportStats() {",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Protected/Profile.html",
+      "line": 148,
+      "type": "calls",
+      "name": "async",
+      "no_link": true,
+      "review": "ok",
+      "code": "document.addEventListener('DOMContentLoaded', async () => {",
+      "was": "unresolved"
+    },
+    {
+      "file": "patch_reports.py",
+      "line": 294,
+      "type": "calls",
+      "name": "set",
+      "no_link": true,
+      "review": "ok",
+      "code": "set('stat-total',    s.total_applications ?? '—');",
+      "was": "dynamic"
+    },
+    {
+      "file": "utils/tools.go",
+      "line": 104,
+      "type": "calls",
+      "name": "t.Format",
+      "no_link": true,
+      "review": "ok",
+      "code": "t.Format(\"Jan 2 2006 15:04\"),",
+      "was": "dynamic"
+    },
+    {
+      "file": "Pages/Html/student/Js/Admin_Modification.js",
+      "line": 51,
+      "type": "calls",
+      "name": "openDeleteModal",
+      "no_link": true,
+      "review": "ok",
+      "code": "del.onclick = () => { if (typeof openDeleteModal === 'function') openDeleteModal(user.email); };",
+      "was": "unresolved"
+    },
+    {
+      "file": "patch_reports.py",
+      "line": 329,
+      "type": "calls",
+      "name": "forEach",
+      "no_link": true,
+      "review": "ok",
+      "code": "['period-year','period-semester','period-month'].forEach(id => {",
+      "was": "unresolved"
+    },
+    {
+      "file": "patch_reports.py",
+      "line": 299,
+      "type": "calls",
+      "name": "toLocaleString",
+      "no_link": true,
+      "review": "ok",
+      "code": "? 'MWK ' + Number(s.total_value).toLocaleString(undefined, {maximumFractionDigits: 0})",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Admin_Modification.js",
+      "line": 45,
+      "type": "calls",
+      "name": "openEditModal",
+      "no_link": true,
+      "review": "ok",
+      "code": "edit.onclick = () => { if (typeof openEditModal === 'function') openEditModal(user); };",
+      "was": "unresolved"
+    },
+    {
+      "file": "patch_reports.py",
+      "line": 321,
+      "type": "calls",
+      "name": "catch",
+      "no_link": true,
+      "review": "ok",
+      "code": "} catch (err) {",
+      "was": "unresolved"
+    },
+    {
+      "file": "patch_reports.py",
+      "line": 135,
+      "type": "calls",
+      "name": "rgba",
+      "no_link": true,
+      "review": "ok",
+      "code": "box-shadow: 0 0 0 3px rgba(37,99,235,0.1);",
+      "was": "unresolved"
+    },
+    {
+      "file": "Pages/Html/student/Js/Filter_Feature.js",
+      "line": 177,
+      "type": "calls",
+      "name": "onRemove",
+      "no_link": true,
+      "review": "ok",
+      "code": "if (onRemove) onRemove(field.key);",
+      "was": "unresolved"
+    },
+    {
+      "file": "Routes/AuditLogs.go",
+      "line": 70,
+      "type": "calls",
+      "name": "user_logs.Get_Payment_Logs",
+      "truth": "function:Audit_logs/User_Logs1.go#Get_Payment_Logs",
+      "review": "?",
+      "code": "logs, total, err := user_logs.Get_Payment_Logs(Db.DB, ctx, limit, offset, filters)",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#Get_Payment_Logs"
+    },
+    {
+      "file": "Routes/Applicants.go",
+      "line": 430,
+      "type": "calls",
+      "name": "user_logs.Create_user_log",
+      "truth": "function:Audit_logs/User_Logs1.go#Create_user_log",
+      "review": "?",
+      "code": "user_logs.Create_user_log(tx, &adminID, Role, \"APPLICATION_COMMENT_ADDED\", fmt.Sprintf(\"Student:%s, Comment:%s\", req.StudentID, req.Comment)",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#Create_user_log"
+    },
+    {
+      "file": "Routes/FinancialReports.go",
+      "line": 25,
+      "type": "calls",
+      "name": "Handles.GetPendingDisbursementsReport",
+      "truth": "function:Handles/FinancialReports.go#GetPendingDisbursementsReport",
+      "review": "?",
+      "code": "result, err = Handles.GetPendingDisbursementsReport(Db.DB, ctx)",
+      "was": "resolved -> function:Handles/FinancialReports.go#GetPendingDisbursementsReport"
+    },
+    {
+      "file": "Routes/FinancialReports.go",
+      "line": 21,
+      "type": "calls",
+      "name": "Handles.GetFundUtilisationReport",
+      "truth": "function:Handles/FinancialReports.go#GetFundUtilisationReport",
+      "review": "?",
+      "code": "result, err = Handles.GetFundUtilisationReport(Db.DB, ctx)",
+      "was": "resolved -> function:Handles/FinancialReports.go#GetFundUtilisationReport"
+    },
+    {
+      "file": "Routes/Auth_ForgotPassword.go",
+      "line": 137,
+      "type": "calls",
+      "name": "services.SendPasswordResetEmail",
+      "truth": "function:services/email_reset.go#SendPasswordResetEmail",
+      "review": "?",
+      "code": "err = services.SendPasswordResetEmail(\"richardsambo94@gmail.com\", token)",
+      "was": "resolved -> function:services/email_reset.go#SendPasswordResetEmail"
+    },
+    {
+      "file": "Audit_logs/User_Logs1.go",
+      "line": 302,
+      "type": "calls",
+      "name": "buildFilterQuery",
+      "truth": "function:Audit_logs/User_Logs1.go#buildFilterQuery",
+      "review": "?",
+      "code": "countQuery, countParams := buildFilterQuery(countBase, filters)",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#buildFilterQuery"
+    },
+    {
+      "file": "Routes/Letters.go",
+      "line": 92,
+      "type": "calls",
+      "name": "user_logs.Create_user_log",
+      "truth": "function:Audit_logs/User_Logs1.go#Create_user_log",
+      "review": "?",
+      "code": "user_logs.Create_user_log(tx, &userId, \"student\", \"STUDENT_LETTER_ALREADY_SENT\", fmt.Sprintf(\"user:%d\", userId), \"FAILED\", time.Since(start)",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#Create_user_log"
+    },
+    {
+      "file": "Routes/Applicants.go",
+      "line": 374,
+      "type": "calls",
+      "name": "Handles.GetUserIDsOfDifferentTypes",
+      "truth": "function:Handles/GetUserIDByEmail1.go#GetUserIDsOfDifferentTypes",
+      "review": "?",
+      "code": "if staffIDs, err := Handles.GetUserIDsOfDifferentTypes(tx, role); err == nil {",
+      "was": "resolved -> function:Handles/GetUserIDByEmail1.go#GetUserIDsOfDifferentTypes"
+    },
+    {
+      "file": "Routes/Reports.go",
+      "line": 31,
+      "type": "calls",
+      "name": "Handles.GetComprehensiveReport",
+      "truth": "function:Handles/Reports.go#GetComprehensiveReport",
+      "review": "?",
+      "code": "reportData, total, err := Handles.GetComprehensiveReport(Db.DB, ctx, limit, offset, year, semester, month, filters)",
+      "was": "resolved -> function:Handles/Reports.go#GetComprehensiveReport"
+    },
+    {
+      "file": "Routes/Login2.go",
+      "line": 101,
+      "type": "calls",
+      "name": "utils.FirstFill",
+      "truth": "function:utils/Fill.go#FirstFill",
+      "review": "?",
+      "code": "err = utils.FirstFill(ctx, role, userID, tx)",
+      "was": "resolved -> function:utils/Fill.go#FirstFill"
+    },
+    {
+      "file": "Routes/Auth_ForgotPassword.go",
+      "line": 230,
+      "type": "calls",
+      "name": "notifications.Send_notification",
+      "truth": "function:Notifications/Created_Notification1.go#Send_notification",
+      "review": "?",
+      "code": "notifications.Send_notification(userID, tx, \"Your password has been successfully reset via email link.\", \"Password Reset Successful\")",
+      "was": "resolved -> function:Notifications/Created_Notification1.go#Send_notification"
+    },
+    {
+      "file": "Routes/Request.go",
+      "line": 138,
+      "type": "calls",
+      "name": "utils.Strtoint64",
+      "truth": "function:utils/tools.go#Strtoint64",
+      "review": "?",
+      "code": "id,err := utils.Strtoint64(reqid[0])",
+      "was": "resolved -> function:utils/tools.go#Strtoint64"
+    },
+    {
+      "file": "Routes/Request.go",
+      "line": 26,
+      "type": "calls",
+      "name": "Handles.GetRequest_Info",
+      "truth": "function:Handles/Request.go#GetRequest_Info",
+      "review": "?",
+      "code": "results,err := Handles.GetRequest_Info(Db.DB,ctx,request)",
+      "was": "resolved -> function:Handles/Request.go#GetRequest_Info"
+    },
+    {
+      "file": "Routes/FinancialApproval.go",
+      "line": 62,
+      "type": "calls",
+      "name": "Handles.GetEmailByUserID",
+      "truth": "function:Handles/GetUserIDByEmail1.go#GetEmailByUserID",
+      "review": "?",
+      "code": "email, _ := Handles.GetEmailByUserID(userid, tx)",
+      "was": "resolved -> function:Handles/GetUserIDByEmail1.go#GetEmailByUserID"
+    },
+    {
+      "file": "Routes/scheme.go",
+      "line": 203,
+      "type": "calls",
+      "name": "middleware.RoleFromContext",
+      "truth": "function:Middleware/auth2.go#RoleFromContext",
+      "review": "?",
+      "code": "Role, ok := middleware.RoleFromContext(ctx)",
+      "was": "resolved -> function:Middleware/auth2.go#RoleFromContext"
+    },
+    {
+      "file": "Routes/Applicants.go",
+      "line": 397,
+      "type": "calls",
+      "name": "middleware.UserIDFromContext",
+      "truth": "function:Middleware/auth2.go#UserIDFromContext",
+      "review": "?",
+      "code": "adminID, _ := middleware.UserIDFromContext(ctx)",
+      "was": "resolved -> function:Middleware/auth2.go#UserIDFromContext"
+    },
+    {
+      "file": "Routes/scheme.go",
+      "line": 168,
+      "type": "calls",
+      "name": "utils.GetScheme",
+      "truth": "function:utils/scheme.go#GetScheme",
+      "review": "?",
+      "code": "schemes, err := utils.GetScheme(Db.DB, ctx)",
+      "was": "resolved -> function:utils/scheme.go#GetScheme"
+    },
+    {
+      "file": "Routes/Letters.go",
+      "line": 120,
+      "type": "calls",
+      "name": "Handles.GetEmailByUserID",
+      "truth": "function:Handles/GetUserIDByEmail1.go#GetEmailByUserID",
+      "review": "?",
+      "code": "email, _ := Handles.GetEmailByUserID(userId, tx)",
+      "was": "resolved -> function:Handles/GetUserIDByEmail1.go#GetEmailByUserID"
+    },
+    {
+      "file": "Routes/AuditLogs.go",
+      "line": 89,
+      "type": "calls",
+      "name": "parseLogFilters",
+      "truth": "function:Routes/AuditLogs.go#parseLogFilters",
+      "review": "?",
+      "code": "filters := parseLogFilters(r)",
+      "was": "resolved -> function:Routes/AuditLogs.go#parseLogFilters"
+    },
+    {
+      "file": "Routes/Applicants.go",
+      "line": 109,
+      "type": "calls",
+      "name": "user_logs.Create_application_log",
+      "truth": "function:Audit_logs/User_Logs1.go#Create_application_log",
+      "review": "?",
+      "code": "user_logs.Create_application_log(tx, adminIDPtr, Role, \"CONSIDER_STUDENT_FAILED\", err.Error(), \"FAILED\", time.Since(start), student.StudentI",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#Create_application_log"
+    },
+    {
+      "file": "Routes/Register.go",
+      "line": 107,
+      "type": "calls",
+      "name": "utils.GenerateVerificationToken",
+      "truth": "function:utils/token1.go#GenerateVerificationToken",
+      "review": "?",
+      "code": "token, err := utils.GenerateVerificationToken(email, tx)",
+      "was": "resolved -> function:utils/token1.go#GenerateVerificationToken"
+    },
+    {
+      "file": "Routes/AdminCreateUser.go",
+      "line": 86,
+      "type": "calls",
+      "name": "Handles.GetAdmins",
+      "truth": "function:Handles/GetUserIDByEmail1.go#GetAdmins",
+      "review": "?",
+      "code": "if adminIDs, err := Handles.GetAdmins(tx); err == nil {",
+      "was": "resolved -> function:Handles/GetUserIDByEmail1.go#GetAdmins"
+    },
+    {
+      "file": "Routes/FinancialReports.go",
+      "line": 23,
+      "type": "calls",
+      "name": "Handles.GetPaymentHistoryReport",
+      "truth": "function:Handles/FinancialReports.go#GetPaymentHistoryReport",
+      "review": "?",
+      "code": "result, err = Handles.GetPaymentHistoryReport(Db.DB, ctx)",
+      "was": "resolved -> function:Handles/FinancialReports.go#GetPaymentHistoryReport"
+    },
+    {
+      "file": "Routes/scheme.go",
+      "line": 265,
+      "type": "calls",
+      "name": "utils.UpdateScheme_Amount",
+      "truth": "function:utils/scheme.go#UpdateScheme_Amount",
+      "review": "?",
+      "code": "err = utils.UpdateScheme_Amount(tx, ctx, schemeid, schemeinfo.Amount, value)",
+      "was": "resolved -> function:utils/scheme.go#UpdateScheme_Amount"
+    },
+    {
+      "file": "Routes/FinancialReports.go",
+      "line": 19,
+      "type": "calls",
+      "name": "Handles.GetDisbursementStatusReport",
+      "truth": "function:Handles/FinancialReports.go#GetDisbursementStatusReport",
+      "review": "?",
+      "code": "result, err = Handles.GetDisbursementStatusReport(Db.DB, ctx)",
+      "was": "resolved -> function:Handles/FinancialReports.go#GetDisbursementStatusReport"
+    },
+    {
+      "file": "Notifications/Created_Notification1.go",
+      "line": 41,
+      "type": "calls",
+      "name": "Send_notification",
+      "truth": "function:Notifications/Created_Notification1.go#Send_notification",
+      "review": "?",
+      "code": "if err := Send_notification(id, tx, message, title); err != nil {",
+      "was": "resolved -> function:Notifications/Created_Notification1.go#Send_notification"
+    },
+    {
+      "file": "Routes/Reports.go",
+      "line": 16,
+      "type": "calls",
+      "name": "utils.GetPaginationParams",
+      "truth": "function:utils/Pagination.go#GetPaginationParams",
+      "review": "?",
+      "code": "page, limit, offset := utils.GetPaginationParams(r)",
+      "was": "resolved -> function:utils/Pagination.go#GetPaginationParams"
+    },
+    {
+      "file": "Routes/AdminModifications.go",
+      "line": 160,
+      "type": "calls",
+      "name": "Handles.GetUserIDByEmail",
+      "truth": "function:Handles/GetUserIDByEmail1.go#GetUserIDByEmail",
+      "review": "?",
+      "code": "targetUserID, err := Handles.GetUserIDByEmail(req.OriginalEmail, tx)",
+      "was": "resolved -> function:Handles/GetUserIDByEmail1.go#GetUserIDByEmail"
+    },
+    {
+      "file": "Routes/Stats.go",
+      "line": 162,
+      "type": "calls",
+      "name": "Handles.GetSchemeReports",
+      "truth": "function:Handles/Stats.go#GetSchemeReports",
+      "review": "?",
+      "code": "reports, err := Handles.GetSchemeReports(Db.DB, ctx)",
+      "was": "resolved -> function:Handles/Stats.go#GetSchemeReports"
+    },
+    {
+      "file": "Routes/Applicants.go",
+      "line": 364,
+      "type": "calls",
+      "name": "user_logs.Create_user_log",
+      "truth": "function:Audit_logs/User_Logs1.go#Create_user_log",
+      "review": "?",
+      "code": "user_logs.Create_user_log(tx, &adminID, Role, \"ROLLBACK_SELECTION\", fmt.Sprintf(\"Student:%s\", student.StudentID), \"SUCCESS\", time.Since(star",
+      "was": "resolved -> function:Audit_logs/User_Logs1.go#Create_user_log"
+    },
+    {
+      "file": "Handles/Request.go",
+      "line": 79,
+      "type": "calls",
+      "name": "rows.Next",
+      "no_link": true,
+      "review": "?",
+      "code": "for rows.Next() {",
+      "was": "value"
+    },
+    {
+      "file": "Handles/FinancialReports.go",
+      "line": 113,
+      "type": "calls",
+      "name": "rows.Scan",
+      "no_link": true,
+      "review": "?",
+      "code": "if err := rows.Scan(&name, &total, &avail, &benefactor, &active); err != nil {",
+      "was": "value"
+    },
+    {
+      "file": "utils/scheme.go",
+      "line": 170,
+      "type": "calls",
+      "name": "rows.Err",
+      "no_link": true,
+      "review": "?",
+      "code": "if err := rows.Err(); err != nil {",
+      "was": "value"
+    },
+    {
+      "file": "Routes/verify1.go",
+      "line": 13,
+      "type": "calls",
+      "name": "r.URL.Query",
+      "no_link": true,
+      "review": "?",
+      "code": "token := r.URL.Query().Get(\"token\")",
+      "was": "value"
+    },
+    {
+      "file": "Handles/Request.go",
+      "line": 161,
+      "type": "calls",
+      "name": "tx.Exec",
+      "no_link": true,
+      "review": "?",
+      "code": "_, err := tx.Exec(ctx, query, reqId)",
+      "was": "value"
+    },
+    {
+      "file": "Handles/Reports.go",
+      "line": 193,
+      "type": "calls",
+      "name": "rows.Scan",
+      "no_link": true,
+      "review": "?",
+      "code": "err := rows.Scan(",
+      "was": "value"
+    },
+    {
+      "file": "Handles/GetUserIDByEmail1.go",
+      "line": 134,
+      "type": "calls",
+      "name": "tx.Query",
+      "no_link": true,
+      "review": "?",
+      "code": "rows, err := tx.Query(context.Background(), query, excludedType)",
+      "was": "value"
+    },
+    {
+      "file": "Handles/FinancialReports.go",
+      "line": 162,
+      "type": "calls",
+      "name": "rows.Next",
+      "no_link": true,
+      "review": "?",
+      "code": "for rows.Next() {",
+      "was": "value"
+    },
+    {
+      "file": "Handles/Stats.go",
+      "line": 389,
+      "type": "calls",
+      "name": "rows.Scan",
+      "no_link": true,
+      "review": "?",
+      "code": "if err := rows.Scan(&f.Faculty, &f.Count, &f.SelectedCount); err != nil {",
+      "was": "value"
+    },
+    {
+      "file": "Routes/FinancialApproval.go",
+      "line": 50,
+      "type": "calls",
+      "name": "err.Error",
+      "no_link": true,
+      "review": "?",
+      "code": "user_logs.Create_user_log(tx, &userid, \"student\", \"FINANCIAL_REQUEST_FAILED\", err.Error(), \"FAILED\", time.Since(start), &userid)",
+      "was": "value"
+    },
+    {
+      "file": "Handles/GetUserIDByEmail1.go",
+      "line": 158,
+      "type": "calls",
+      "name": "rows.Close",
+      "no_link": true,
+      "review": "?",
+      "code": "defer rows.Close()",
+      "was": "value"
+    },
+    {
+      "file": "Middleware/auth2.go",
+      "line": 89,
+      "type": "calls",
+      "name": "currentTime.Format",
+      "no_link": true,
+      "review": "?",
+      "code": "log.Println(\"AUTH_DEBUG: Session found. Expiration (DB):\", expiresAt.Format(time.RFC3339), \"Current Time (UTC):\", currentTime.Format(time.RF",
+      "was": "value"
+    },
+    {
+      "file": "Handles/Reports.go",
+      "line": 191,
+      "type": "calls",
+      "name": "rows.Next",
+      "no_link": true,
+      "review": "?",
+      "code": "for rows.Next() {",
+      "was": "value"
+    },
+    {
+      "file": "utils/tools.go",
+      "line": 88,
+      "type": "calls",
+      "name": "t.Time.IsZero",
+      "no_link": true,
+      "review": "?",
+      "code": "if t.Time.IsZero() {",
+      "was": "value"
+    },
+    {
+      "file": "utils/finance.go",
+      "line": 57,
+      "type": "calls",
+      "name": "tx.Exec",
+      "no_link": true,
+      "review": "?",
+      "code": "row, err := tx.Exec(",
+      "was": "value"
+    },
+    {
+      "file": "Routes/Letters.go",
+      "line": 53,
+      "type": "calls",
+      "name": "file.Close",
+      "no_link": true,
+      "review": "?",
+      "code": "defer file.Close()",
+      "was": "value"
+    },
+    {
+      "file": "Routes/Auth_ForgotPassword.go",
+      "line": 187,
+      "type": "calls",
+      "name": "tx.Commit",
+      "no_link": true,
+      "review": "?",
+      "code": "tx.Commit(ctx)",
+      "was": "value"
+    },
+    {
+      "file": "Handles/GetUserIDByEmail1.go",
+      "line": 42,
+      "type": "calls",
+      "name": "tx.QueryRow",
+      "no_link": true,
+      "review": "?",
+      "code": "err := tx.QueryRow(context.Background(), query, userID).Scan(&email)",
+      "was": "value"
+    },
+    {
+      "file": "Audit_logs/User_Logs1.go",
+      "line": 178,
+      "type": "calls",
+      "name": "tx.Exec",
+      "no_link": true,
+      "review": "?",
+      "code": "_, err := tx.Exec(context.Background(), query, now, userID, userRole, action, target, status, dur, applicationName, amount, targetUserID)",
+      "was": "value"
+    },
+    {
+      "file": "Handles/Reports.go",
+      "line": 217,
+      "type": "calls",
+      "name": "rows.Err",
+      "no_link": true,
+      "review": "?",
+      "code": "if rows.Err() != nil {",
+      "was": "value"
+    }
+  ]
+}

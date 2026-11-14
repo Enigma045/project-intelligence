@@ -1,0 +1,20 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+"source", "context", "progress", "edit", "undo":
+@@NEW
+"source", "context", "progress", "edit", "undo", "routes", "db", "bench":
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+&& !runEdit(cmd, absRoot, st, args, *asJSON) {
+@@NEW
+&& !runEdit(cmd, absRoot, st, args, *asJSON) && !runBackend(cmd, absRoot, st, args, *asJSON) {
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+unresolved|graph-stats|web|dom-refs|source|context|progress|edit|undo>
+@@NEW
+unresolved|graph-stats|web|dom-refs|source|context|progress|edit|undo|routes|db|bench>
+@@END

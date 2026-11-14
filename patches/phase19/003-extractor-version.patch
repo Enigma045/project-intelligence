@@ -1,0 +1,6 @@
+@@FILE internal/index/impact.go
+@@OLD
+const ExtractorVersion = "11"
+@@NEW
+const ExtractorVersion = "12"
+@@END

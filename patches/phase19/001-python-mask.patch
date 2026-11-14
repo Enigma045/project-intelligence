@@ -1,0 +1,14 @@
+@@FILE internal/extract/python.go
+@@OLD
+skip := map[int]bool{}
+@@NEW
+skip := map[int]bool{}
+  masked := maskTriple(lines)
+@@END
+
+@@FILE internal/extract/python.go
+@@OLD
+code := stripStrings(line)
+@@NEW
+code := stripStrings(masked[i])
+@@END

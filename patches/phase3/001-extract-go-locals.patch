@@ -1,0 +1,29 @@
+@@FILE internal/extract/golang.go
+@@OLD
+for _, decl := range f.Decls {
+@@NEW
+imps := importNames(f)
+  for _, decl := range f.Decls {
+@@END
+
+@@FILE internal/extract/golang.go
+@@OLD
+ast.Inspect(d.Body, func(n ast.Node) bool {
+@@NEW
+locals := collectLocals(fset, d)
+        ast.Inspect(d.Body, func(n ast.Node) bool {
+@@END
+
+@@FILE internal/extract/golang.go
+@@OLD
+name = typeStr(fset, fn)
+@@NEW
+name = selName(fn)
+@@END
+
+@@FILE internal/extract/golang.go
+@@OLD
+facts.Refs = append(facts.Refs, model.RawRef{Kind: "call", Name: name, Line: fset.Position(ce.Pos()).Line, From: q})
+@@NEW
+facts.Refs = append(facts.Refs, model.RawRef{Kind: "call", Name: name, Target: callTarget(name, locals, imps), Line: fset.Position(ce.Pos()).Line, From: q})
+@@END

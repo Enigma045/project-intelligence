@@ -1,0 +1,6 @@
+@@FILE demo/a.py
+@@OLD
+def foo(x):
+@@NEW
+def foo(x, y):
+@@END

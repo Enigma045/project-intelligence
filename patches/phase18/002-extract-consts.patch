@@ -1,0 +1,7 @@
+@@FILE internal/extract/zz_register.go
+@@OLD
+cleanJSRefs(&f, lines)
+@@NEW
+cleanJSRefs(&f, lines)
+  addJSConsts(&f, lines)
+@@END

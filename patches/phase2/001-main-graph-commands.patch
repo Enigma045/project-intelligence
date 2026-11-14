@@ -1,0 +1,18 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+<scan|outline|search|refs|stats|extract>
+@@NEW
+<scan|outline|search|refs|stats|extract|callers|callees|deps|unresolved|graph-stats>
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+case "stats":
+@@NEW
+case "callers", "callees", "deps", "unresolved", "graph-stats":
+    if !runGraph(cmd, st, args, *asJSON) {
+      usage()
+      os.Exit(2)
+    }
+  case "stats":
+@@END

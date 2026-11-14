@@ -1,0 +1,7 @@
+@@FILE cmd/pidx/context.go
+@@OLD
+sort.Slice(nodes, func(i, j int) bool {
+@@NEW
+nodes = dropStyle(task, nodes)
+  sort.Slice(nodes, func(i, j int) bool {
+@@END

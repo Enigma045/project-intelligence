@@ -1,0 +1,14 @@
+@@FILE internal/resolve/backend.go
+@@OLD
+out := map[string]map[string]*importInfo{}
+@@NEW
+out := map[string]map[string]*importInfo{}
+  gn := newGoNames(in.Refs)
+@@END
+
+@@FILE internal/resolve/backend.go
+@@OLD
+for _, base := range importBases(imp) {
+@@NEW
+for _, base := range append(importBases(imp), gn.extra(f.Path, imp, files)...) {
+@@END

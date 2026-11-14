@@ -1,0 +1,13 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+case "callers", "callees", "deps", "unresolved", "graph-stats":
+@@NEW
+case "callers", "callees", "deps", "unresolved", "graph-stats", "web", "dom-refs":
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+if !runGraph(cmd, st, args, *asJSON) {
+@@NEW
+if !runGraph(cmd, st, args, *asJSON) && !runWeb(cmd, st, args, *asJSON) {
+@@END

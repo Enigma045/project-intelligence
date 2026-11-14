@@ -1,0 +1,3 @@
+{"edits": [
+  {"file": "demo/data.json", "op": "create", "text": "{\n  \"name\": \"demo\",\n  \"version\": 1\n}\n"}
+]}

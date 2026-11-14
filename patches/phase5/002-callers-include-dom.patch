@@ -1,0 +1,6 @@
+@@FILE cmd/pidx/graph.go
+@@OLD
+types := []string{"calls", "listens"}
+@@NEW
+types := []string{"calls", "listens", "listens_dom"}
+@@END

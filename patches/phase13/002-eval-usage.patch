@@ -1,0 +1,6 @@
+@@FILE cmd/pidx/eval.go
+@@OLD
+baseline=<baseline.json> [update=1]"
+@@NEW
+baseline=<baseline.json> [update=1]\n  why    file=<tasks.json> [name=<task>]\n  sheet  labels=<labels.json> [out=<review.txt>]\n  apply  labels=<labels.json> decisions=<decisions.txt>"
+@@END

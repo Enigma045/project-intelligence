@@ -1,0 +1,13 @@
+@@FILE internal/eval/edges.go
+@@OLD
+if !allow[e.Type] || e.Line <= 0 || e.File == "" {
+@@NEW
+if !allow[e.Type] || e.Line <= 0 || e.File == "" || strings.HasPrefix(e.DstName, "?.") {
+@@END
+
+@@FILE cmd/pidx/eval.go
+@@OLD
+statuses = []string{"value", "dynamic", "unresolved", "ambiguous"}
+@@NEW
+statuses = []string{"dynamic", "unresolved", "ambiguous"}
+@@END

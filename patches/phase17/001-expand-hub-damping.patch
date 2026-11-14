@@ -1,0 +1,35 @@
+@@FILE cmd/pidx/context.go
+@@OLD
+top := seeds[0].Score
+@@NEW
+top := seeds[0].Score
+  hubs, _ := st.HubCallers(hubMin)
+@@END
+
+@@FILE cmd/pidx/context.go
+@@OLD
+v := score[cur] * w * f
+@@NEW
+v := score[cur] * w * f
+      if e.Type == "calls" {
+        v *= hubDamp(hubs[nb])
+      }
+@@END
+
+@@FILE cmd/pidx/ctxexpand.go
+@@OLD
+score, err := expand(st, seeds)
+@@NEW
+score, err := expand(st, seeds)
+  hubs, _ := st.HubCallers(hubMin)
+@@END
+
+@@FILE cmd/pidx/ctxexpand.go
+@@OLD
+v := score[e.Src] * w * f
+@@NEW
+v := score[e.Src] * w * f
+      if e.Type == "calls" {
+        v *= hubDamp(hubs[e.Dst])
+      }
+@@END

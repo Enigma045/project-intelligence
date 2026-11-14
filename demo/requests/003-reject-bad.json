@@ -1,0 +1,4 @@
+{"edits": [
+  {"file": "demo/web/register.js", "op": "replace", "base_hash": "sha256:0000", "old": "function submitForm", "new": "function submitFormX"},
+  {"file": "demo/web/register.js", "op": "replace", "old": "function doesNotExist", "new": "x"}
+]}

@@ -1,0 +1,6 @@
+@@FILE internal/eval/edges.go
+@@OLD
+  return dst == truth || strings.HasSuffix(dst, "#"+truth)
+@@NEW
+  return dst == truth || strings.HasSuffix(dst, "#"+truth) || strings.HasSuffix(dst, "/"+truth) || strings.HasSuffix(dst, ":"+truth)
+@@END

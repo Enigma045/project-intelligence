@@ -1,0 +1,6 @@
+@@FILE internal/docs/sig.go
+@@OLD
+case "field":
+@@NEW
+case "field", "column":
+@@END

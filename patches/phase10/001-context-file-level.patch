@@ -1,0 +1,13 @@
+@@FILE cmd/pidx/context.go
+@@OLD
+md, err := buildContext(st, task, budget)
+@@NEW
+md, err := buildContextWithFiles(st, task, budget)
+@@END
+
+@@FILE cmd/pidx/backend.go
+@@OLD
+md, err := buildContext(st, task, 3000)
+@@NEW
+md, err := buildContextWithFiles(st, task, 3000)
+@@END

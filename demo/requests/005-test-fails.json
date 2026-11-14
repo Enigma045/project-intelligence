@@ -1,0 +1,3 @@
+{"test_command": "exit 1", "edits": [
+  {"op": "insert_before_symbol", "symbol": "function:demo/web/register.js#submitForm", "text": "// TEMP marker\n"}
+]}

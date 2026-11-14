@@ -1,0 +1,13 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+return r.targetStatic(c, from, name)
+@@NEW
+return r.sameLang(c, r.targetStatic(c, from, name))
+@@END
+
+@@FILE internal/resolve/web.go
+@@OLD
+if s.Kind == "function" || (dotted && s.Kind == "method") {
+@@NEW
+if (s.Kind == "function" || (dotted && s.Kind == "method")) && langGroup(s.File) == "js" {
+@@END

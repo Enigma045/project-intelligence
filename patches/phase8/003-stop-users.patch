@@ -1,0 +1,6 @@
+@@FILE internal/query/seed.go
+@@OLD
+so we my our your user users code
+@@NEW
+so we my our your user code
+@@END

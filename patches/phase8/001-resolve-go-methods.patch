@@ -1,0 +1,6 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+cs, tier := pick(r.filter(last, "function", "method", "class"), c, order(c.lang, true))
+@@NEW
+cs, tier := pick(r.filter(last, dottedKinds(c.lang)...), c, order(c.lang, true))
+@@END

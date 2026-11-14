@@ -1,0 +1,49 @@
+@@FILE internal/resolve/web.go
+@@OLD
+// html file -> classes present
+@@NEW
+// html file -> classes present
+  classEls   map[string]map[string][]string // html file -> class -> element IDs
+@@END
+
+@@FILE internal/resolve/web.go
+@@OLD
+cssClass: map[string][]*model.Symbol{}, idx: map[string]int{},
+@@NEW
+cssClass: map[string][]*model.Symbol{}, idx: map[string]int{}, classEls: map[string]map[string][]string{},
+@@END
+
+@@FILE internal/resolve/web.go
+@@OLD
+w.classes[r.File][r.Name] = true
+@@NEW
+w.classes[r.File][r.Name] = true
+      if i := strings.Index(r.From, "#"); i >= 0 {
+        if id := w.elems[r.File][r.From[i+1:]]; id != "" {
+          if w.classEls[r.File] == nil {
+            w.classEls[r.File] = map[string][]string{}
+          }
+          w.classEls[r.File][r.Name] = uniqAppend(w.classEls[r.File][r.Name], id)
+        }
+      }
+@@END
+
+@@FILE internal/resolve/web.go
+@@OLD
+w.add(model.Edge{Src: src, Dst: "file:" + p, DstName: "." + r.Name, Type: "styles", Status: "inferred", Confidence: 0.7, Line: r.Line, File: r.File, Evidence: "." + r.Name})
+@@NEW
+if els := w.classEls[p][r.Name]; len(els) > 0 {
+            for _, el := range els {
+              w.add(model.Edge{Src: src, Dst: el, DstName: "." + r.Name, Type: "styles", Status: "inferred", Confidence: 0.7, Line: r.Line, File: r.File, Evidence: "." + r.Name})
+            }
+          } else {
+            w.add(model.Edge{Src: src, Dst: "file:" + p, DstName: "." + r.Name, Type: "styles", Status: "inferred", Confidence: 0.7, Line: r.Line, File: r.File, Evidence: "." + r.Name})
+          }
+@@END
+
+@@FILE internal/resolve/web_test.go
+@@OLD
+check("styles", idRule, ".primary-button", "inferred", "file:"+html)
+@@NEW
+check("styles", idRule, ".primary-button", "inferred", idBtn)
+@@END

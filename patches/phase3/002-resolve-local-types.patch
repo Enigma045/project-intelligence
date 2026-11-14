@@ -1,0 +1,82 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+byFileQ map[string]string
+@@NEW
+byFileQ map[string]string
+  vars    map[string][]*model.Symbol
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+byFileQ: map[string]string{}}
+@@NEW
+byFileQ: map[string]string{}, vars: map[string][]*model.Symbol{}}
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+r.byID[s.ID] = s
+@@NEW
+r.byID[s.ID] = s
+    if s.Kind == "var" || s.Kind == "const" {
+      r.vars[s.Name] = append(r.vars[s.Name], s)
+    }
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+func (r *resolver) target(c *fileCtx, from *model.Symbol, name string) []hit {
+@@NEW
+func (r *resolver) target(c *fileCtx, from *model.Symbol, name, hint string) []hit {
+  if strings.HasPrefix(hint, "local") {
+    return r.viaLocal(c, name, strings.TrimPrefix(strings.TrimPrefix(hint, "local"), ":"))
+  }
+  return r.targetStatic(c, from, name)
+}
+
+func (r *resolver) targetStatic(c *fileCtx, from *model.Symbol, name string) []hit {
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+if builtins[last] {
+@@NEW
+if r.isVar(c, last) {
+      return []hit{{"", "value", 0.85}}
+    }
+    if builtins[last] {
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+if globals[first] {
+@@NEW
+if r.isVar(c, first) {
+    return []hit{{"", "value", 0.85}}
+  }
+  if globals[first] {
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+cs, tier := pick(r.filter(last, "function", "method", "class"), c, order(c.lang, true))
+  if len(cs) == 0 {
+    return unres()
+  }
+@@NEW
+cs, tier := pick(r.filter(last, "function", "method", "class"), c, order(c.lang, true))
+  if len(cs) == 0 {
+    return []hit{{"", "dynamic", 0.2}}
+  }
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+for _, h := range r.target(c, from, name) {
+@@NEW
+hint := ""
+    if ref.Kind == "call" {
+      hint = ref.Target
+    }
+    for _, h := range r.target(c, from, name, hint) {
+@@END

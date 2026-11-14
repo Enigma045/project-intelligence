@@ -1,0 +1,20 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+"graph-stats", "web", "dom-refs":
+@@NEW
+"graph-stats", "web", "dom-refs", "source", "context", "progress":
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+&& !runWeb(cmd, st, args, *asJSON) {
+@@NEW
+&& !runWeb(cmd, st, args, *asJSON) && !runDocs(cmd, absRoot, st, args, *asJSON) {
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+unresolved|graph-stats>
+@@NEW
+unresolved|graph-stats|web|dom-refs|source|context|progress>
+@@END

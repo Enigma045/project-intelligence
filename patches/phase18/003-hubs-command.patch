@@ -1,0 +1,13 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+"bench", "eval":
+@@NEW
+"bench", "eval", "hubs":
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+&& !runEval(cmd, absRoot, st, args, *asJSON) {
+@@NEW
+&& !runEval(cmd, absRoot, st, args, *asJSON) && !runHubs(cmd, st, args, *asJSON) {
+@@END

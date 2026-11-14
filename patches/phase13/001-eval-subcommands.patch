@@ -1,0 +1,12 @@
+@@FILE cmd/pidx/eval.go
+@@OLD
+evalAll(absRoot, st, kv, asJSON)
+@@NEW
+evalAll(absRoot, st, kv, asJSON)
+  case "why":
+    evalWhy(absRoot, st, kv)
+  case "sheet":
+    evalSheet(absRoot, kv)
+  case "apply":
+    evalApply(kv)
+@@END

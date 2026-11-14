@@ -1,0 +1,38 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+rep.Added, rep.Changed, rep.Deleted, rep.Unchanged, rep.Touched, rep.Failed, rep.Elapsed)
+@@NEW
+rep.Added, rep.Changed, rep.Deleted, rep.Unchanged, rep.Touched, rep.Failed, rep.Elapsed)
+    printImpact(rep)
+@@END
+
+@@FILE cmd/pidx/graph.go
+@@OLD
+dst = "(unresolved) " + e.DstName
+@@NEW
+dst = "(unresolved) " + e.DstName
+  case "value", "dynamic":
+    dst = "(" + e.Status + ") " + e.DstName
+@@END
+
+@@FILE cmd/pidx/graph.go
+@@OLD
+return fmt.Sprintf("%s:%d  %s -[%s %s %.2f x%d]-> %s", e.File, e.Line, e.Src, e.Type, e.Status, e.Confidence, e.Count, dst)
+@@NEW
+loc := e.File
+  if e.Line > 0 {
+    loc = fmt.Sprintf("%s:%d", e.File, e.Line)
+  }
+  return fmt.Sprintf("%s  %s -[%s %s %.2f x%d]-> %s", loc, e.Src, e.Type, e.Status, e.Confidence, e.Count, dst)
+@@END
+
+@@FILE cmd/pidx/graph.go
+@@OLD
+show(st.EdgesByStatus([]string{"unresolved", "ambiguous"}, limit))
+@@NEW
+statuses := []string{"unresolved", "ambiguous"}
+    if len(args) > 1 {
+      statuses = args[1:]
+    }
+    show(st.EdgesByStatus(statuses, limit))
+@@END

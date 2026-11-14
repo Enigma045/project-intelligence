@@ -1,0 +1,17 @@
+@@FILE internal/extract/golang.go
+@@OLD
+facts.Imports = append(facts.Imports, p)
+@@NEW
+facts.Imports = append(facts.Imports, p)
+      if im.Name != nil && im.Name.Name != "_" && im.Name.Name != "." {
+        facts.Refs = append(facts.Refs, model.RawRef{Kind: "go_import", Name: im.Name.Name, Target: p, Line: fset.Position(im.Pos()).Line})
+      }
+@@END
+
+@@FILE internal/extract/zz_register.go
+@@OLD
+f.Refs = append(f.Refs, refs...)
+@@NEW
+f.Refs = append(f.Refs, refs...)
+  f.Refs = append(f.Refs, goPackageRefs(src)...)
+@@END

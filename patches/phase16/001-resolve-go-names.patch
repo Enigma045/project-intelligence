@@ -1,0 +1,14 @@
+@@FILE internal/resolve/resolve.go
+@@OLD
+ctxs := map[string]*fileCtx{}
+@@NEW
+ctxs := map[string]*fileCtx{}
+  gn := newGoNames(in.Refs)
+@@END
+
+@@FILE internal/resolve/resolve.go
+@@OLD
+for _, b := range importBases(imp) {
+@@NEW
+for _, b := range append(importBases(imp), gn.extra(f.Path, imp, files)...) {
+@@END

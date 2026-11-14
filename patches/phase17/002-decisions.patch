@@ -1,0 +1,27 @@
+@@FILE eval/decisions.txt
+@@OLD
+44 skip
+@@NEW
+44 ok
+@@END
+
+@@FILE eval/decisions.txt
+@@OLD
+48 skip
+@@NEW
+48 ok
+@@END
+
+@@FILE eval/decisions.txt
+@@OLD
+45 skip
+@@NEW
+45 link route:main.go#ANY /api/send-letter
+@@END
+
+@@FILE eval/decisions.txt
+@@OLD
+49 skip
+@@NEW
+49 link route:main.go#ANY /api/get-letters
+@@END

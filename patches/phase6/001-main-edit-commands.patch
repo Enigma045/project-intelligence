@@ -1,0 +1,20 @@
+@@FILE cmd/pidx/main.go
+@@OLD
+"source", "context", "progress":
+@@NEW
+"source", "context", "progress", "edit", "undo":
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+&& !runDocs(cmd, absRoot, st, args, *asJSON) {
+@@NEW
+&& !runDocs(cmd, absRoot, st, args, *asJSON) && !runEdit(cmd, absRoot, st, args, *asJSON) {
+@@END
+
+@@FILE cmd/pidx/main.go
+@@OLD
+unresolved|graph-stats|web|dom-refs|source|context|progress>
+@@NEW
+unresolved|graph-stats|web|dom-refs|source|context|progress|edit|undo>
+@@END

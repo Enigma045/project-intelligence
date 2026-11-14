@@ -1,0 +1,41 @@
+{
+  "name": "ubaps starter tasks (drafts written from symbol names in the index: verify each must/noise entry against the source)",
+  "tasks": [
+    {
+      "name": "login",
+      "task": "Modify login to authorize users and redirect by role",
+      "must": ["ANY /Authorize", "Routes/Login2.go#Login", "Js/Login.js", "utils/sessions2.go#CreateSessionTx"],
+      "noise": ["Audit_logs/", "Handles/FinancialReports"]
+    },
+    {
+      "name": "student_application",
+      "task": "Student application form submission should validate input before saving",
+      "must": ["Student_Application.js#validateStep", "ANY /SubmitForm", "Routes/StudentApplication3.go#SubmitForm", "utils/Fill.go#UpdateApplication", "Student_Application.html#form#bursaryForm"],
+      "noise": ["Handles/FinancialReports"]
+    },
+    {
+      "name": "forgot_password",
+      "task": "Forgot password should email a reset link and let the user set a new password",
+      "must": ["ANY /api/forgot-password", "Auth_ForgotPassword.go#ForgotPasswordAPI", "ANY /api/reset-password", "Auth_ForgotPassword.go#ResetPasswordAPI", "Js/ForgotPassword.js"],
+      "noise": ["Handles/FinancialReports", "Js/Combined_reports"]
+    },
+    {
+      "name": "committee_review",
+      "task": "Committee review should consider, reject or roll back a student selection",
+      "must": ["ANY /considerstudent", "ANY /rejectstudent", "ANY /api/rollback-selection", "Committe_Review.js#initModalLogic", "Handles/Applicants.go#ConsiderStudent"],
+      "noise": ["Handles/FinancialReports"]
+    },
+    {
+      "name": "admin_delete_user",
+      "task": "Admin deletes a user account from the user management page",
+      "must": ["ANY /deleteaccount", "Routes/AdminModifications.go#DeleteAccount", "Js/Test_Delete.js", "Admin_Modification.js"],
+      "noise": ["Audit_logs/", "Handles/FinancialReports"]
+    },
+    {
+      "name": "pay_installment",
+      "task": "Finance approves a request and pays an installment to a student",
+      "must": ["ANY /payinstallment", "Handles/Applicants.go#PayInstallment", "Js/Financial_Approval.js"],
+      "noise": ["Js/Login"]
+    }
+  ]
+}

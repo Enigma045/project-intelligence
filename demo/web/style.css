@@ -1,0 +1,5 @@
+:root { --brand: #3366ff; }
+.primary-button { background: var(--brand); }
+#email { border: 1px solid #cccccc; }
+.error { display: none; }
+.error.visible { display: block; }

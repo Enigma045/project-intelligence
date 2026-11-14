@@ -1,0 +1,37 @@
+@@FILE internal/resolve/backend.go
+@@OLD
+varByName  map[string][]*model.Symbol
+@@NEW
+varByName  map[string][]*model.Symbol
+  consts     map[string]string
+@@END
+
+@@FILE internal/resolve/backend.go
+@@OLD
+varByName: map[string][]*model.Symbol{}, idx: map[string]int{},
+@@NEW
+varByName: map[string][]*model.Symbol{}, idx: map[string]int{}, consts: map[string]string{},
+@@END
+
+@@FILE internal/resolve/backend.go
+@@OLD
+case "route_handler":
+@@NEW
+case "js_const":
+      b.consts[r.File+"|"+r.Name] = r.Target
+    case "route_handler":
+@@END
+
+@@FILE internal/resolve/backend.go
+@@OLD
+p := raw
+@@NEW
+p, subbed := b.subst(r.File, raw)
+@@END
+
+@@FILE internal/resolve/backend.go
+@@OLD
+if dyn && status == "resolved" {
+@@NEW
+if (dyn || subbed) && status == "resolved" {
+@@END

@@ -1,0 +1,14 @@
+@@FILE cmd/pidx/context.go
+@@OLD
+var ctxTypes = []string{"calls", "listens", "listens_dom", "references_dom", "styles", "toggles_class"}
+@@NEW
+var ctxTypes = []string{"calls", "listens", "listens_dom", "references_dom", "styles", "toggles_class", "requests_api", "handles_route", "queries_table", "foreign_key"}
+@@END
+
+@@FILE cmd/pidx/context.go
+@@OLD
+"styles": 0.45, "toggles_class": 0.45,
+@@NEW
+"styles": 0.45, "toggles_class": 0.45,
+  "requests_api": 0.9, "handles_route": 0.9, "queries_table": 0.85, "foreign_key": 0.7,
+@@END
