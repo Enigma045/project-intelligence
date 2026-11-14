@@ -46,3 +46,4 @@ desktop.ini
 # --- local secrets ---
 .env
 .env.*
+.atomic_*
